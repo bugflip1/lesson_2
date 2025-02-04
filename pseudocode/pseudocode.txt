@@ -1,0 +1,108 @@
+given numbers a and b
+
+calculate the sum 
+
+return the sum
+
+Formal 
+
+Read a
+Read b
+sum = a + b
+return sum
+
+# new one 
+
+given a list of strings
+
+iterate through the list. adding each item to an initially empty string using the + for strings
+
+return the final string 
+
+# next
+
+given a list of integers
+
+iterate through each item
+and somehow only add everyother item to a new list
+
+iterate through the list,
+every iteration check if a value is true or false
+if true, add iterated item to list and toggle False
+if false, toggle True
+
+Formal
+
+START 
+
+# Given a list of integers
+
+SET newlist = empty list
+SET toggle = True
+
+FOR every number in givenlist
+    IF toggle is true
+        append number to new list 
+        Toggle = False
+    ELSE
+        toggle = True
+return newlist
+
+# find third of a given character
+
+given a string and a character
+
+replace the first 2 occurances of the character with spaces,
+if the character is a space, change the replacement to a .
+find the charcter in the string, if found, return indexm if not, return None. 
+
+Formal
+
+START 
+
+# Given a string
+# Given a character
+SET replacer = ' '
+IF character is ' '
+    SET replacer = '.'
+
+SET newstring = replace the first two occurances of character with replacer, assign to newstring
+
+SET final = STRING.FIND character
+IF final is -1
+    RETURN None
+ELSE 
+    RETURN final
+
+# merging lists 
+
+given two lists of integers
+merge them alternating form list one or two in the new list. 
+return new list   
+
+# mental model 2
+
+Check if lists are empty.
+Use a while loop with an explicit index variable.
+Append from list1 first (ensures even index placement), then from list2 (ensures odd index placement).
+Increment the index each loop.
+Return the merged list at the end.
+
+# Pseudocode
+
+START 
+
+# given list1 and list2
+
+SET final = empty list
+SET index = start index (0)
+
+IF list1 is empty (check if falsy)
+	return "ERROR: Lists cannot be empty"
+
+WHILE INDEX < the length of list1
+	append list1 at index to final
+	append list2 at index to final
+	increment index by 1
+
+return final
