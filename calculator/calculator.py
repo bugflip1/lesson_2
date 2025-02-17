@@ -74,6 +74,6 @@ def rerun(): # Asks if the user wants to do another operation, loops itself
 
 
 # MAIN #
-welcome()13245
+welcome()
 main()
 rerun()
