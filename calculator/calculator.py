@@ -34,7 +34,7 @@ def operation_complete(num1, num2, op): # pylint: disable=unused-argument
         case _:
             user_operation = input(prompt(
                 'Please enter an appropriate operation!\n'
-                '(+, -, *, or /)'
+                '(+, -, *, or /)\n'
                 ))
             return operation_complete(num1, num2, user_operation)
 
@@ -56,7 +56,7 @@ while not is_numeric(number2):
 operation = input(prompt(
     "What operation would you like to perform?\n"
     '"+" for addition\n"-" for subtraction\n"*" for multiplication\n'
-    ""/" for division\nEnter here: "
+    '"/" for division\nEnter here: '
     ))
 
 # Perform the operation on the two numbers
