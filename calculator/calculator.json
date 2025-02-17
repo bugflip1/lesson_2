@@ -9,7 +9,9 @@
         "result": "The result is:",
         "rerun": "Would you like to perform another operation?\n Enter Y or N: ",
         "goodbye": "Thank you for using Calculator! Goodbye!",
-        "langrabber": "Please enter a language:\n(English, Spanish, French, German, Italian, Portuguese, Russian, or Japanese)\n"
+        "langrabber": "Please enter a language:\n",
+        "invalidlan": "Sorry, that is not a valid language!",
+        "ifinterrupt": "User has ended the program\n"
     },
     "spanish": {
         "welcome_messages": "¡Bienvenido a Calculadora!",
@@ -20,7 +22,8 @@
         "opprompt": "¿Qué operación le gustaría realizar?\n\"+\" para suma\n\"-\" para resta\n\"*\" para multiplicación\n\"/\" para división\nIngrese aquí: ",
         "result": "El resultado es:",
         "rerun": "¿Le gustaría realizar otra operación?\n Ingrese Y o N: ",
-        "goodbye": "¡Gracias por usar Calculadora! ¡Adiós!"
+        "goodbye": "¡Gracias por usar Calculadora! ¡Adiós!",
+        "ifinterrupt": "El usuario ha terminado el programa\n"
     },
     "french": {
         "welcome_messages": "Bienvenue dans Calculateur!",
@@ -31,7 +34,8 @@
         "opprompt": "Quelle opération souhaitez-vous effectuer?\n\"+\" pour l'addition\n\"-\" pour la soustraction\n\"*\" pour la multiplication\n\"/\" pour la division\nEntrez ici: ",
         "result": "Le résultat est:",
         "rerun": "Voulez-vous effectuer une autre opération?\n Entrez Y ou N: ",
-        "goodbye": "Merci d'utiliser Calculateur! Au revoir!"
+        "goodbye": "Merci d'utiliser Calculateur! Au revoir!",
+        "ifinterrupt": "L'utilisateur a mis fin au programme\n"
     },
     "german": {
         "welcome_messages": "Willkommen zum Rechner!",
@@ -42,7 +46,8 @@
         "opprompt": "Welche Operation möchten Sie durchführen?\n\"+\" für Addition\n\"-\" für Subtraktion\n\"*\" für Multiplikation\n\"/\" für Division\nHier eingeben: ",
         "result": "Das Ergebnis ist:",
         "rerun": "Möchten Sie eine weitere Berechnung durchführen?\nGeben Sie Y oder N ein: ",
-        "goodbye": "Danke, dass Sie den Rechner benutzen! Auf Wiedersehen!"
+        "goodbye": "Danke, dass Sie den Rechner benutzen! Auf Wiedersehen!",
+        "ifinterrupt": "Der Benutzer hat das Programm beendet\n"
     },
     "italian": {
         "welcome_messages": "Benvenuto in Calcolatrice!",
@@ -53,7 +58,8 @@
         "opprompt": "Quale operazione vuoi eseguire?\n\"+\" per addizione\n\"-\" per sottrazione\n\"*\" per moltiplicazione\n\"/\" per divisione\nInserisci qui: ",
         "result": "Il risultato è:",
         "rerun": "Vuoi eseguire un'altra operazione?\nInserisci Y o N: ",
-        "goodbye": "Grazie per aver usato Calcolatrice! Arrivederci!"
+        "goodbye": "Grazie per aver usato Calcolatrice! Arrivederci!",
+        "ifinterrupt": "L'utente ha terminato il programma\n"
     },
     "portuguese": {
         "welcome_messages": "Bem-vindo à Calculadora!",
@@ -64,7 +70,8 @@
         "opprompt": "Qual operação você gostaria de realizar?\n\"+\" para adição\n\"-\" para subtração\n\"*\" para multiplicação\n\"/\" para divisão\nInsira aqui: ",
         "result": "O resultado é:",
         "rerun": "Você gostaria de realizar outra operação?\nDigite Y ou N: ",
-        "goodbye": "Obrigado por usar a Calculadora! Adeus!"
+        "goodbye": "Obrigado por usar a Calculadora! Adeus!",
+        "ifinterrupt": "O usuário encerrou o programa\n"
     },
     "russian": {
         "welcome_messages": "Добро пожаловать в Калькулятор!",
@@ -75,7 +82,8 @@
         "opprompt": "Какую операцию вы хотите выполнить?\n\"+\" для сложения\n\"-\" для вычитания\n\"*\" для умножения\n\"/\" для деления\nВведите здесь: ",
         "result": "Результат:",
         "rerun": "Хотите выполнить еще одну операцию?\nВведите Y или N: ",
-        "goodbye": "Спасибо за использование Калькулятора! До свидания!"
+        "goodbye": "Спасибо за использование Калькулятора! До свидания!",
+        "ifinterrupt": "Пользователь завершил программу\n"
     },
     "japanese": {
         "welcome_messages": "電卓へようこそ！",
@@ -86,6 +94,19 @@
         "opprompt": "どの演算を実行しますか？\n\"+\" は加算\n\"-\" は減算\n\"*\" は乗算\n\"/\" は除算\nここに入力: ",
         "result": "結果は:",
         "rerun": "別の演算を実行しますか？\nY または N を入力してください: ",
-        "goodbye": "電卓をご利用いただきありがとうございます！さようなら！"
+        "goodbye": "電卓をご利用いただきありがとうございます！さようなら！",
+        "ifinterrupt": "ユーザーがプログラムを終了しました\n"
+    },
+    "korean": {
+        "welcome_messages": "계산기에 오신 것을 환영합니다!",
+        "invalidop": "올바른 연산을 입력하세요!\n(+, -, *, 또는 /)\n",
+        "invalidnum": "유효한 숫자를 입력하세요!\n",
+        "numoneprompt": "첫 번째 숫자를 입력하세요:\n",
+        "numtwoprompt": "두 번째 숫자를 입력하세요:\n",
+        "opprompt": "어떤 연산을 수행하시겠습니까?\n\"+\" 덧셈\n\"-\" 뺄셈\n\"*\" 곱셈\n\"/\" 나눗셈\n여기에 입력하세요: ",
+        "result": "결과는:",
+        "rerun": "다른 연산을 수행하시겠습니까?\n Y 또는 N을 입력하세요: ",
+        "goodbye": "계산기를 사용해 주셔서 감사합니다! 안녕히 가세요!",
+        "ifinterrupt": "사용자가 프로그램을 종료했습니다\n"
     }
 }
