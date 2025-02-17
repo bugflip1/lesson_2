@@ -1,3 +1,12 @@
+# IMPORTS #
+
+# JSON import and setup
+import json
+
+# Open the JSON file for reading
+with open('calculator/calculator.json', 'r') as file:
+    data = json.load(file)
+
 # FUNCTIONS #
 
 def is_numeric(s): # Is numeric function, really only checks for floats
@@ -6,7 +15,7 @@ def is_numeric(s): # Is numeric function, really only checks for floats
         return True
     except ValueError:
         return False
-    
+
 def conv_int(num1, num2): # Converts the input to floats
     return float(num1), float(num2)
 
@@ -28,47 +37,44 @@ def operation_complete(num1, num2, op): # pylint: disable=unused-argument
 
         case _:
             user_operation = input(prompt(
-                'Please enter an appropriate operation!\n'
-                '(+, -, *, or /)\n'
+                data["invalidop"]
                 ))
             return operation_complete(num1, num2, user_operation)
 
 def welcome(): # Welcome message
-    print('Welcome to Calculator!')
+    print(data["welcome_messages"])
 
 def main(): # Main function
 
     # Ask the user for the first number
-    number1 = input(prompt("What's the first number?\n"))
+    number1 = input(prompt(data["numoneprompt"]))
     while not is_numeric(number1):
-        number1 = input(prompt("Please enter a valid number!\n"))
+        number1 = input(prompt(data["invalidnum"]))
 
     # Ask the user for the second number
-    number2 = input(prompt("What's the second number?\n"))
+    number2 = input(prompt(data["numtwoprompt"]))
     while not is_numeric(number2):
-        number1 = input(prompt("Please enter a valid number!\n"))
+        number2 = input(prompt(data["invalidnum"]))
 
 
     # Ask the user for the operation to perform
-    operation = input(prompt(
-        "What operation would you like to perform?\n"
-        '"+" for addition\n"-" for subtraction\n"*" for multiplication\n'
-        '"/" for division\nEnter here: '
-        ))
+    operation = input(prompt(data["opprompt"]))
 
     # Perform the operation on the two numbers
     number1, number2 = conv_int(number1, number2)
 
     # Print the result to the terminal
-    print(f"The result is: {operation_complete(number1, number2, operation)}")
+    print(
+        f'{data["result"]} {operation_complete(number1, number2, operation)}'
+        )
 
 def rerun(): # Asks if the user wants to do another operation, loops itself
-    user_input = input(prompt("Would you like to perform another operation?\n Enter Y or N: "))
+    user_input = input(prompt(data["rerun"]))
     if user_input.lower() == 'y':
         main()
         rerun()
     elif user_input.lower() == 'n':
-        print("Goodbye!")
+        print(data["goodbye"])
 
 # FUNCTIONS END #'
 
