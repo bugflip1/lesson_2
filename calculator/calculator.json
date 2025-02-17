@@ -1,0 +1,19 @@
+{
+    "welcome_messages": "Welcome to Calculator!",
+
+    "invalidop": "Please enter an appropriate operation!\n(+, -, *, or /)\n",
+
+    "invalidnum": "Please enter a valid number!\n",
+
+    "numoneprompt": "Please enter the first number:\n",
+
+    "numtwoprompt": "Please enter the second number:\n",
+
+    "opprompt": "What operation would you like to perform?\n\"+\" for addition\n\"-\" for subtraction\n\"*\" for multiplication\n\"/\" for division\nEnter here: ",
+
+    "result": "The result is: \n",
+
+    "Rerun": "Would you like to perform another operation?\n Enter Y or N: ",
+
+    "Goodbye": "Thank you for using Calculator! Goodbye!"
+}

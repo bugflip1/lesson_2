@@ -1,3 +1,12 @@
+# IMPORTS #
+
+# JSON import and setup 
+import json
+
+# Open the JSON file for reading
+with open('calculator.json', 'r') as file:
+    data = json.load(file)
+
 # FUNCTIONS #
 
 def is_numeric(s): # Is numeric function, really only checks for floats
