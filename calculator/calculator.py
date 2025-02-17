@@ -96,15 +96,15 @@ def operation_complete(num1, num2, op): # pylint: disable=unused-argument
         op = safeinput(prompt(lan["opprompt"]))
 
     match op:
-        case '+': 
+        case '+':
             return num1 + num2
-        
-        case '-': 
+
+        case '-':
             return num1 - num2
-        
-        case '*': 
+
+        case '*':
             return num1 * num2
-        
+
         case '/': return num1 / num2
 
 def rerun(): # Asks if the user wants to do another operation, loops itselfsdsf
