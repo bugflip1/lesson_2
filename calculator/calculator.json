@@ -11,9 +11,9 @@
 
     "opprompt": "What operation would you like to perform?\n\"+\" for addition\n\"-\" for subtraction\n\"*\" for multiplication\n\"/\" for division\nEnter here: ",
 
-    "result": "The result is: \n",
+    "result": "The result is:",
 
-    "Rerun": "Would you like to perform another operation?\n Enter Y or N: ",
+    "rerun": "Would you like to perform another operation?\n Enter Y or N: ",
 
-    "Goodbye": "Thank you for using Calculator! Goodbye!"
+    "goodbye": "Thank you for using Calculator! Goodbye!"
 }
