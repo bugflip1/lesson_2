@@ -28,3 +28,4 @@ def collect_grades(students):
 
 grades = collect_grades(students)
 print(average_grade(grades))
+# this is a test
