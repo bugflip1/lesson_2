@@ -5,7 +5,6 @@ import json
 
 with open('calculator/calculator.json', 'r') as file:
     data = json.load(file)
-
 # Python debug
 import sys
 
