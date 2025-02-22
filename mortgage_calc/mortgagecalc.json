@@ -1,0 +1,24 @@
+{
+
+"welcome" : "Welcome to the Loan/Mortgage Calculator!\nAll you need to do is have your loan amount, length of your loan, and the APR!\nLets gets started!",
+
+"amount_wel" : "Let's start with your loan amount. You can type it with or without commas! (100,000 or 100000)",
+
+"amount_inp" : "Enter your loan amount: ",
+
+"amount_num" : "Remeber to only enter numbers. These are numbers",
+
+"amount_zero" : "You cannot enter a loan amount of $0, lets try this again",
+
+"apr_input" : "Enter your APR as a percentage.\nFor example you can enter 6.5%, 7, or 4%:\n",
+
+"apr_float" : "What you entered wasn't really a number.\nTry again but this time pay attention to the examples!",
+ 
+"len_year" : "Enter your loan duration in years.\nDon't worry about entering additional months right now, you'll get a chance to enter those later!",
+
+"len_num" : "Yeah that wasn't really a number.\n It's ok! This time enter the length of your loan in years! (like 15 or 25)",
+
+"year_inp" : "Enter loan duration (years):"
+
+
+}

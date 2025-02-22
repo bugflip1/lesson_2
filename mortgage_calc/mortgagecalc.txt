@@ -1,0 +1,170 @@
+This is brain storming/pseudocode for the mortgage calc assignment
+
+3 input information:
+- loan amount
+- APR
+- loan duration
+
+Need to calculate:
+
+- Monthly interest rate
+
+Formula in python is this:
+
+m = p * (j / (1 - (1 + j) ** (-n)))
+
+monthly payment = loan amount x (monthly interest rate / (1 - ( 1 + monthly interest rate) ** (- loan duration in months)))
+
+m = monthly payment
+p = loan amount
+j = monthly interest rate
+n = loan duration in months
+
+NOTES
+- Make the payment amount print in dollars
+
+CALCULATION STEPS TO TAKE
+- Make sure APR is in correct format of percentage 50% is 0.50, 5% is 0.05 etc
+- convert APR to monthly by divinding APR by 12
+- convert total loan length to monthly loan length.
+
+Pseudocode 1
+
+Retreive APR, Loan length, and loan amount from user
+
+check APR to correct format
+check loan length to correct format
+check loam amount to correct format
+
+convert APR to monthly
+convert loan length to months
+
+pass through equation to get monthly payment. 
+
+multiply result by loan length to get total loan amount
+subtract loan amount from total loan amount to get total interest
+
+Return values to user
+
+Pseudocode 2 (Skeleton structure)
+
+FUNCTIONS
+
+PRINT welcome
+
+GET loan_amount
+
+CHECK loan_amount
+
+PRINT next step
+
+GET APR
+
+CHECK APR
+
+CONVERT APR (convert to monthly APR in correct format)
+
+PRINT next step
+
+GET loan_duration
+
+CHECK loan_duration (loan_duration should be in months after check)
+
+CALCULATE using loan_amount, loan_duration and APR (Calculate total interest, total loan amount, and monthly payment)
+
+PRINT results
+
+
+
+FUNCTION BREAKDOWNS
+
+FUNCTION get_and_check_loan_amount():  (Combined get and check into 1 for this)
+    WHILE true:
+        loan_amount = USER INPUT
+
+        IF ',' is in loan_amount:
+            remove ',' from loan amount
+
+        IF loan_amount is numeric and '.-_' is not in loan_amount:
+            BREAK
+        RETURN loan_amount
+
+FUNCTION get_apr():
+    WHILE true:
+        WHILE true:
+            apr = USER INPUT (APR will be give as a percentage, like 5% or 5)
+
+            Remove '%' from APR
+
+            IF apr less than 100:
+                BREAK
+        IF apr is numeric:
+            BREAK
+    RETURN apr
+
+
+FUNCTION convert_apr(apr_as_percentage):
+    apr_as_decimal = apr_as_percentage / 100
+    monthly_as_decimal = apr_as_decimal divided by 12
+    RETURN monthly_as_decimal
+
+FUNCITON get_int_loan_duration():
+   PRINT "You will be asked to enter your loan duration in years,
+   Dont worry! if you need to enter months as well,
+   in the case of a loan duration of 10 years and 4 months,
+   you will be asked for months as well, if you have no months to add, enter 0"
+
+    WHILE true:
+        PRINT loan duration years enter message
+        loan_duration_years_raw = USER INPUT
+        IF '.' not in loan_duration_years_raw:
+                IF loan_duration_years_raw is not numeric:
+                    IF FUNC check_and_convert_loan_duration(loan_duration_years_raw) does not equal False:
+                        loan_duration_years_int = check_and_convert_loan_duration(loan_duration_years_raw)
+                        BREAK
+                ELSE: 
+                    PRINT "Please enter only numbers for the loan duration"
+            ELSE:
+                PRINT "Please enter only whole numbers without decimal points,for example 
+                if your loan amount is 7.5 years, please just enter 7 now and dont worry, you will be asked later to enter the remaining months."
+    
+    WHILE true:
+        Print loan duration months enter message
+        loan_duration_months_raw = USER INPUT
+        IF loan_duration_months_raw is blank:
+            SET loan_duration_months to 0
+            BREAK
+        IF '.' isnt in loan_duration_months_raw:
+                IF loan_duration_months_raw is not numeric:
+                    IF FUNC check_and_convert_loan_duration(loan_duration_months_raw) does not equal False:
+                        loan_duration_months_int = check_and_convert_loan_duration(loan_duration_months_raw)
+                        BREAK
+                ELSE: 
+                    PRINT "Please enter only numbers for the remaining loan duration"
+            ELSE:
+                PRINT "Please enter only whole numbers without decimal points,for example 
+                if your the remaining months for your loan is 3.7 months, please enter 4.
+                Rounding up or down is up to your discretion.
+                We will not be calculating for remaining weeks or days."
+    FUNC combine_months_and_years(loan_duration_years_int, loan_duration_months_int)   
+    RETURN total_loan_duration_months
+
+FUNCTION combine_months_and_years(loan_duration_years_int, loan_duration_months_int):
+    loan_duration_years_to_months = loan_duration_years_int * 12
+    total_loan_duration_months = loan_duration_years_to_months + loan_duration_months_int
+    RETURN total_loan_duration_months
+
+FUNCTION check_and_convert_loan_duration(loan_duration_in_string_format):
+    TRY:
+        SET loan_duration = integer of loan_duration_in_string_format
+    EXCEPT any error:
+        RETURN False
+    ELSE:
+        RETURN loan_duration
+
+FUNCTION calculate_equation(apr, loan_amount, loan_duration):
+    SET monthly_payment to loan_amount * (apr/ (1 - (1 + apr) ** (-loan_duration)))
+    SET total_loan_amount to monthly_payment * loan_duration
+    SET total_interest to total_loan_amount - loan_amount
+    RETURN monthly_payment, total_loan_amount, total_interest
+
