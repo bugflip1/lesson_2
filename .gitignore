@@ -1,7 +1,6 @@
 # Ignore Python compiled files
 __pycache__/
 *.pyc
-.pylintrc
 
 # Ignore system files
 .DS_Store
