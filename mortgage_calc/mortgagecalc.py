@@ -11,15 +11,17 @@ with open('mortgagecalc.json', 'r') as file:
 #| VARIABLES |#
 
 LINE_STARTER = '==>'
+DECIMAL_POINTS = 2
+MONTHS_IN_YEAR = 12
 
 #| FUNCTIONS |#
 
-def starter(message):
+def format_messages_with_prefix(message):
     '''Formats all new lines to start with the line starter string
     '''
     return f"{LINE_STARTER} {message.format(starter = LINE_STARTER)}"
 
-def input_clean(user_input):
+def remove_special_characters(user_input):
     '''Cleans up input by removing allowed characters
     '''
     char_to_replace = ' %$,'
@@ -32,33 +34,32 @@ def get_loan_amount():
     '''Manages the flow of other functions to get loan amount from user,
     checks that it is correct, and returns it as a float.
     '''
-    print(starter(MSG["amount_wel"]))
+    print(format_messages_with_prefix(MSG["amount_wel"]))
     while True:
-        loan_amount = input(starter(MSG['amount_inp']))
-        loan_amount = input_clean(loan_amount)
-        loan_amount_float = float_check(loan_amount, 'amount')
+        user_amount = input(format_messages_with_prefix(MSG['amount_inp']))
+        user_amount = remove_special_characters(user_amount)
+        amount_float = validate_and_convert_to_float(user_amount, 'amount')
 
-        if loan_amount_float == 0:
-            print(starter(MSG['amount_zero']))
-        elif loan_amount_float != 'x':
+        if amount_float == 0:
+            print(format_messages_with_prefix(MSG['amount_zero']))
+        elif amount_float != 'x':
             break
-    return loan_amount_float
+    return amount_float
 
-def float_check(user_input, key):
-    '''Checks input and performs float conversion if able to
+def validate_and_convert_to_float(user_input, key):
+    '''Validates input and returns a float if able to
     '''
-    if '_' not in user_input:
-        try:
-            return float(user_input)
-        except ValueError:
-            error_msg = (
-                MSG[f'{key}_blank'] if user_input == ''
-                else MSG[f'{key}_float']
-            )
-            print(starter(error_msg))
-            return 'x'
-    else:
-        print(starter(MSG['und']))
+    if '_' in user_input:
+        print(format_messages_with_prefix(MSG['und']))
+        return 'x'
+    try:
+        return float(user_input)
+    except ValueError:
+        error_msg = (
+            MSG[f'{key}_blank'] if user_input == ''
+            else MSG[f'{key}_float']
+        )
+        print(format_messages_with_prefix(error_msg))
         return 'x'
 
 def get_apr():
@@ -66,9 +67,9 @@ def get_apr():
     checks that it is correct, and converts it to a float.
     '''
     while True :
-        apr_input = input(starter(MSG['apr_inp']))
-        apr_input = input_clean(apr_input)
-        apr = float_check(apr_input, 'apr')
+        apr_input = input(format_messages_with_prefix(MSG['apr_inp']))
+        apr_input = remove_special_characters(apr_input)
+        apr = validate_and_convert_to_float(apr_input, 'apr')
         if apr != 'x':
             apr = convert_apr(apr)
             break
@@ -77,22 +78,22 @@ def get_apr():
 def convert_apr(apr_percentage):
     '''Converts yearly interest rate from a percent to a decimal
     '''
-    return (apr_percentage / 100) / 12
+    return (apr_percentage / 100) / MONTHS_IN_YEAR
 
 def get_duration_and_check(key):
     '''Gets duration of loan from user, checks it, and returns it as an integer
     '''
     while True:
-        raw_duration = input(starter(MSG[f'{key}_inp']))
+        raw_duration = input(format_messages_with_prefix(MSG[f'{key}_inp']))
 
         if raw_duration == '':
             return 0
-        if '.' not in raw_duration:
-            if raw_duration.isdigit():
-                return int(raw_duration)
-            print(starter(MSG[f'{key}_num']))
-        else:
-            print(starter(MSG[f'{key}_dec']))
+        if '.' in raw_duration:
+            print(format_messages_with_prefix(MSG[f'{key}_dec']))
+            break
+        if raw_duration.isdigit():
+            return int(raw_duration)
+        print(format_messages_with_prefix(MSG[f'{key}_num']))
 
 ## Gets loan duration and returns it correctly formatted
 
@@ -100,17 +101,16 @@ def get_loan_duration():
     '''Manages functions to get year duration and months duration.
     returns the total loan duration in months.
     '''
-    print(starter(MSG['len_year']))
+    print(format_messages_with_prefix(MSG['len_year']))
     while True:
         year_dur_int = get_duration_and_check('year')
         mon_dur_int = get_duration_and_check('mon')
         loan_duration_months = comb_months_years(year_dur_int, mon_dur_int)
 
         if loan_duration_months == 0:
-            print(starter(MSG['len_zero']))
+            print(format_messages_with_prefix(MSG['len_zero']))
         else:
-            break
-    return loan_duration_months
+            return loan_duration_months
 
 
 def comb_months_years(years, months):
@@ -120,7 +120,7 @@ def comb_months_years(years, months):
     Converts loan duration in years to months then returns
     total duration in months
     '''
-    return (years * 12) + months
+    return (years * MONTHS_IN_YEAR) + months
 
 def calculate_equation(loan_amount, monthly_rate, months):
     '''Using the loan amount, monthly rate, and total
@@ -139,11 +139,11 @@ def calculate_equation(loan_amount, monthly_rate, months):
                 monthly_rate / (
                     1 - (1 + monthly_rate) ** (-months)
                         )
-                    ), 2
+                    ), DECIMAL_POINTS
                 )
 
-    total_payments = round(monthly_payment * months, 2)
-    total_interest = round(total_payments - loan_amount, 2)
+    total_payments = round(monthly_payment * months, DECIMAL_POINTS)
+    total_interest = round(total_payments - loan_amount, DECIMAL_POINTS)
     return monthly_payment, total_payments, total_interest
 
 def print_results(results):
@@ -151,7 +151,7 @@ def print_results(results):
     Make sure the list is organized correctly.
     '''
     print(
-        starter(
+        format_messages_with_prefix(
             MSG['results'].format(
                 monthly = results[0],
                 total = results[1],
@@ -167,7 +167,7 @@ def print_results(results):
 def run_program():
     '''Manages all functions and provides flow control for the program
     '''
-    print(starter(MSG['welcome']))
+    print(format_messages_with_prefix(MSG['welcome']))
     amount = get_loan_amount()
     rate, raw_apr = get_apr()
     length = get_loan_duration()
