@@ -1,0 +1,80 @@
+{
+
+"win_messages" : {
+
+    "rock" : {
+
+        "lizard" : "crushes",
+
+        "scissors" : "crushes"
+    },
+
+    "paper" : {
+
+        "rock" : "covers",
+
+        "spock": "disproves"
+    },
+
+    "scissors": {
+
+        "lizard" : "decapitates",
+
+        "paper" : "cuts"
+    },
+
+    "spock" : {
+
+        "scissors" : "smashes",
+
+        "rock" : "vaporizes"
+    },
+
+    "lizard" : {
+
+        "spock" : "poisons",
+
+        "paper" : "eats"
+    }
+
+},
+
+"tie" : "Your choice was {usr_choice}, and the computer's choice was {comp_choice}.",
+
+"choice_prompt" : "Choose one: {choices}",
+
+"choice_instruct" : "You can also enter the first letter of each choice.\n==> (Except enter 'sc' for scissors. 's' will choose spock)",
+
+"announce_win" : "You won!",
+
+"announce_tie" : "It's a tie!",
+
+"announce_loss" : "You lost :(",
+
+"usr_won" : "Your {usr_choice} {win_msg} the computer's {comp_choice}!",
+
+"comp_won" : "The computer's {comp_choice} {win_msg} your {usr_choice}.",
+
+"rerun_prompt" : "Would you like to play again? (yes/no)",
+
+"invalid_rerun" : "Invalid input! Please enter 'yes', 'y', 'no', or 'n'.",
+
+"welcome_instruct" : "You are about to play Rock, Paper, Scissors, Lizard, Spock. Best of 5!",
+
+"cont_welcome" : "Are you ready? Press RETURN or ENTER to continue.",
+
+"usr_score" : "Your wins: {score}",
+
+"comp_score" : "Computer wins: {score}",
+
+"next_round" : "Press RETURN or ENTER to play the next round.",
+
+"total_win" : "You beat the computer in a best of 5!",
+
+"total_loss" : "The computer beat you in a best of 5 :(",
+
+"total_score" : "You won {usr_wins} time(s) and the computer won {comp_wins} time(s).",
+
+"cont_game" : "Press ENTER or RETURN to continue."
+
+}

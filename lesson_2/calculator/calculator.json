@@ -1,0 +1,112 @@
+{
+    "english": {
+        "welcome_messages": "Welcome to Calculator!",
+        "invalidop": "Please enter an appropriate operation!\n(+, -, *, or /)\n",
+        "invalidnum": "Please enter a valid number!\n",
+        "numoneprompt": "Please enter the first number:\n",
+        "numtwoprompt": "Please enter the second number:\n",
+        "opprompt": "What operation would you like to perform?\n\"+\" for addition\n\"-\" for subtraction\n\"*\" for multiplication\n\"/\" for division\nEnter here: ",
+        "result": "The result is:",
+        "rerun": "Would you like to perform another operation?\n Enter Y or N: ",
+        "goodbye": "Thank you for using Calculator! Goodbye!",
+        "langrabber": "Please enter a language:\n",
+        "invalidlan": "Sorry, that is not a valid language!",
+        "ifinterrupt": "User has ended the program\n"
+    },
+    "spanish": {
+        "welcome_messages": "¡Bienvenido a Calculadora!",
+        "invalidop": "¡Por favor, ingrese una operación válida!\n(+, -, *, o /)\n",
+        "invalidnum": "¡Por favor, ingrese un número válido!\n",
+        "numoneprompt": "Por favor, ingrese el primer número:\n",
+        "numtwoprompt": "Por favor, ingrese el segundo número:\n",
+        "opprompt": "¿Qué operación le gustaría realizar?\n\"+\" para suma\n\"-\" para resta\n\"*\" para multiplicación\n\"/\" para división\nIngrese aquí: ",
+        "result": "El resultado es:",
+        "rerun": "¿Le gustaría realizar otra operación?\n Ingrese Y o N: ",
+        "goodbye": "¡Gracias por usar Calculadora! ¡Adiós!",
+        "ifinterrupt": "El usuario ha terminado el programa\n"
+    },
+    "french": {
+        "welcome_messages": "Bienvenue dans Calculateur!",
+        "invalidop": "Veuillez entrer une opération valide!\n(+, -, *, ou /)\n",
+        "invalidnum": "Veuillez entrer un numéro valide!\n",
+        "numoneprompt": "Veuillez entrer le premier numéro:\n",
+        "numtwoprompt": "Veuillez entrer le deuxième numéro:\n",
+        "opprompt": "Quelle opération souhaitez-vous effectuer?\n\"+\" pour l'addition\n\"-\" pour la soustraction\n\"*\" pour la multiplication\n\"/\" pour la division\nEntrez ici: ",
+        "result": "Le résultat est:",
+        "rerun": "Voulez-vous effectuer une autre opération?\n Entrez Y ou N: ",
+        "goodbye": "Merci d'utiliser Calculateur! Au revoir!",
+        "ifinterrupt": "L'utilisateur a mis fin au programme\n"
+    },
+    "german": {
+        "welcome_messages": "Willkommen zum Rechner!",
+        "invalidop": "Bitte geben Sie eine gültige Operation ein!\n(+, -, *, oder /)\n",
+        "invalidnum": "Bitte geben Sie eine gültige Zahl ein!\n",
+        "numoneprompt": "Bitte geben Sie die erste Zahl ein:\n",
+        "numtwoprompt": "Bitte geben Sie die zweite Zahl ein:\n",
+        "opprompt": "Welche Operation möchten Sie durchführen?\n\"+\" für Addition\n\"-\" für Subtraktion\n\"*\" für Multiplikation\n\"/\" für Division\nHier eingeben: ",
+        "result": "Das Ergebnis ist:",
+        "rerun": "Möchten Sie eine weitere Berechnung durchführen?\nGeben Sie Y oder N ein: ",
+        "goodbye": "Danke, dass Sie den Rechner benutzen! Auf Wiedersehen!",
+        "ifinterrupt": "Der Benutzer hat das Programm beendet\n"
+    },
+    "italian": {
+        "welcome_messages": "Benvenuto in Calcolatrice!",
+        "invalidop": "Inserisci un'operazione valida!\n(+, -, *, o /)\n",
+        "invalidnum": "Inserisci un numero valido!\n",
+        "numoneprompt": "Inserisci il primo numero:\n",
+        "numtwoprompt": "Inserisci il secondo numero:\n",
+        "opprompt": "Quale operazione vuoi eseguire?\n\"+\" per addizione\n\"-\" per sottrazione\n\"*\" per moltiplicazione\n\"/\" per divisione\nInserisci qui: ",
+        "result": "Il risultato è:",
+        "rerun": "Vuoi eseguire un'altra operazione?\nInserisci Y o N: ",
+        "goodbye": "Grazie per aver usato Calcolatrice! Arrivederci!",
+        "ifinterrupt": "L'utente ha terminato il programma\n"
+    },
+    "portuguese": {
+        "welcome_messages": "Bem-vindo à Calculadora!",
+        "invalidop": "Por favor, insira uma operação válida!\n(+, -, *, ou /)\n",
+        "invalidnum": "Por favor, insira um número válido!\n",
+        "numoneprompt": "Por favor, insira o primeiro número:\n",
+        "numtwoprompt": "Por favor, insira o segundo número:\n",
+        "opprompt": "Qual operação você gostaria de realizar?\n\"+\" para adição\n\"-\" para subtração\n\"*\" para multiplicação\n\"/\" para divisão\nInsira aqui: ",
+        "result": "O resultado é:",
+        "rerun": "Você gostaria de realizar outra operação?\nDigite Y ou N: ",
+        "goodbye": "Obrigado por usar a Calculadora! Adeus!",
+        "ifinterrupt": "O usuário encerrou o programa\n"
+    },
+    "russian": {
+        "welcome_messages": "Добро пожаловать в Калькулятор!",
+        "invalidop": "Пожалуйста, введите допустимую операцию!\n(+, -, *, или /)\n",
+        "invalidnum": "Пожалуйста, введите действительное число!\n",
+        "numoneprompt": "Пожалуйста, введите первое число:\n",
+        "numtwoprompt": "Пожалуйста, введите второе число:\n",
+        "opprompt": "Какую операцию вы хотите выполнить?\n\"+\" для сложения\n\"-\" для вычитания\n\"*\" для умножения\n\"/\" для деления\nВведите здесь: ",
+        "result": "Результат:",
+        "rerun": "Хотите выполнить еще одну операцию?\nВведите Y или N: ",
+        "goodbye": "Спасибо за использование Калькулятора! До свидания!",
+        "ifinterrupt": "Пользователь завершил программу\n"
+    },
+    "japanese": {
+        "welcome_messages": "電卓へようこそ！",
+        "invalidop": "有効な演算を入力してください！\n(+, -, *, または /)\n",
+        "invalidnum": "有効な数字を入力してください！\n",
+        "numoneprompt": "最初の数を入力してください:\n",
+        "numtwoprompt": "2 番目の数を入力してください:\n",
+        "opprompt": "どの演算を実行しますか？\n\"+\" は加算\n\"-\" は減算\n\"*\" は乗算\n\"/\" は除算\nここに入力: ",
+        "result": "結果は:",
+        "rerun": "別の演算を実行しますか？\nY または N を入力してください: ",
+        "goodbye": "電卓をご利用いただきありがとうございます！さようなら！",
+        "ifinterrupt": "ユーザーがプログラムを終了しました\n"
+    },
+    "korean": {
+        "welcome_messages": "계산기에 오신 것을 환영합니다!",
+        "invalidop": "올바른 연산을 입력하세요!\n(+, -, *, 또는 /)\n",
+        "invalidnum": "유효한 숫자를 입력하세요!\n",
+        "numoneprompt": "첫 번째 숫자를 입력하세요:\n",
+        "numtwoprompt": "두 번째 숫자를 입력하세요:\n",
+        "opprompt": "어떤 연산을 수행하시겠습니까?\n\"+\" 덧셈\n\"-\" 뺄셈\n\"*\" 곱셈\n\"/\" 나눗셈\n여기에 입력하세요: ",
+        "result": "결과는:",
+        "rerun": "다른 연산을 수행하시겠습니까?\n Y 또는 N을 입력하세요: ",
+        "goodbye": "계산기를 사용해 주셔서 감사합니다! 안녕히 가세요!",
+        "ifinterrupt": "사용자가 프로그램을 종료했습니다\n"
+    }
+}

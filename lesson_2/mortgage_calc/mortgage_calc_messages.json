@@ -1,0 +1,53 @@
+{
+
+"welcome" : "Welcome to the Loan/Mortgage Calculator!",
+
+"amount_wel" : "Let's start with your loan amount. You can type it with or without commas! ($100,000 or 100000)",
+
+"amount_inp" : "Enter your loan amount:\n",
+
+"und" : "Because '_' are considered numeric, I can't let those slide. Sorry.",
+
+"amount_two_dec" : "You can't enter a number with more than two decimal places. (10,000.45 is good, 10,000.456 is not)",
+
+"amount_float" : "Remember to only enter numbers. (You can include the dollar symbol and commas)",
+
+"amount_blank" : "Your loan amount cannot be blank.",
+
+"amount_zero" : "You cannot enter a loan amount of $0, lets try this again.",
+
+"amount_neg" : "You cannot enter a negative amount.",
+
+"apr_inp" : "Enter your APR as a percentage. For example you can enter 6.5%, 7, or 4%:\n",
+
+"apr_blank" : "Your APR cannot be blank.",
+
+"apr_neg" : "You cannot enter a negative apr.",
+
+"apr_two_dec" : "You can't enter a number with more than two decimal places. (5.65 is good, 5.654 is not)",
+
+"apr_float" : "Only enter numbers. Look at the examples for help",
+ 
+"len_year" : "Enter your loan duration in years. (Do not enter additional months, you'll enter those later.)",
+
+"year_num" : "Enter the length of your loan in numbers only (like 15 or 25)",
+
+"year_inp" : "Enter loan duration (years):\n",
+
+"year_dec" : "Enter years as whole numbers.\n{starter} For a loan duration of 5 years, 4 months, just enter 5.\n{starter} You will have an opportunity to enter extra months later.",
+
+"mon_inp" : "Enter the remaining months. If none, enter 0 or press enter:\n",
+
+"mon_num" : "Please only enter numbers.",
+
+"mon_dec" : "Only whole numbers are accepted.\n{starter} Calculations for weeks or days remaining will not be provided.",
+
+"len_zero" : "You cannot have a total loan length of 0, that means your total payment is due right now.",
+
+"results" : "With a loan amount of ${amount}, a loan duration of {length} months, and an APR of {apr}%.\n{starter} Your monthly payment is: ${monthly}\n{starter} Your total loan payment will be: ${total}\n{starter} Your total interest paid will be: ${interest}",
+
+"rerun_prompt" : "Would you like to calculate again (y/n)?\n",
+
+"rerun_invalid" : "Please enter a valid answer ('yes' and 'y', or 'no' and 'n')"
+
+}
