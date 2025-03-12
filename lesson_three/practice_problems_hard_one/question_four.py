@@ -1,3 +1,6 @@
+def is_an_ip_number(this_is_a_filler_so_the_file_isnt_red_in_vscode):
+    return False
+
 def is_dot_separated_ip_address(input_string):
     dot_separated_words = input_string.split(".")
     if len(dot_separated_words) == 4:
