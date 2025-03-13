@@ -45,6 +45,8 @@
 
 "choice_instruct" : "You can also enter the first letter of each choice.\n==> (Except enter 'sc' for scissors. 's' will choose spock)",
 
+"invalid_choice" : "Invalid input, please enter one of the options given.",
+
 "announce_win" : "You won!",
 
 "announce_tie" : "It's a tie!",

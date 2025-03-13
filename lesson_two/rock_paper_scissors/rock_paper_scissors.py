@@ -79,25 +79,28 @@ def display_pre_messages(user_score, computer_score):
 
 def validate_user_choice(user_input):
     if user_input in VALID_CHOICES:
-        return user_input
+        return user_input, None
     if user_input == 'sc':
-        return VALID_CHOICES[2]
+        return VALID_CHOICES[2], None
     for choice in VALID_CHOICES:
         if choice == VALID_CHOICES[2]:
             continue
         if user_input == choice[0]:
-            return choice
-    return False
+            return choice, None
+    return False, MSG['invalid_choice']
 
 def generate_computer_choice():
     return random.choice(VALID_CHOICES)
 
 def run_one_round(player_score, com_score):
+    invalid_message = ''
     while True:
         clear_terminal()
+        if invalid_message:
+            prompt(invalid_message)
         display_pre_messages(player_score, com_score)
         user_choice = get_user_choice()
-        validated_choice = validate_user_choice(user_choice)
+        validated_choice, invalid_message = validate_user_choice(user_choice)
         if validated_choice:
             break
 
@@ -123,7 +126,7 @@ def user_init_next_round():
 def ask_to_rerun():
     while True:
         prompt(MSG["rerun_prompt"])
-        rerun_input = input()
+        rerun_input = input().lower()
         if rerun_input != '':
             if rerun_input[0] == 'y':
                 return True
